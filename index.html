@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago de Plan Telefónico</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+    <h1>PAGO DE PLAN TELEFÓNICO</h1>
+
+    <form>
+
+        <div class="fila">
+            <label for="minutos">MINUTOS:</label>
+            <input type="number" id="minutos" name="minutos" required>
+        </div>
+
+        <div class="fila">
+            <label>TIPO PLAN:</label>
+
+            <div class="opciones">
+                <input type="radio" id="basico" name="plan">
+                <label for="basico">BÁSICO</label>
+
+                <input type="radio" id="premium" name="plan">
+                <label for="premium">PREMIUM</label>
+
+                <input type="radio" id="ilimitado" name="plan">
+                <label for="ilimitado">ILIMITADO</label>
+            </div>
+        </div>
+
+        <div class="fila">
+            <label>OTROS SERVICIOS:</label>
+
+            <div class="opciones">
+                <input type="checkbox" id="sms">
+                <label for="sms">SMS</label>
+
+                <input type="checkbox" id="internet">
+                <label for="internet">INTERNET</label>
+
+                <input type="checkbox" id="roaming">
+                <label for="roaming">ROAMING</label>
+            </div>
+        </div>
+
+        <div class="fila">
+            <label for="paquete">PAQUETES:</label>
+
+            <select id="paquete">
+                <option>SELECCIONE</option>
+                <option>PAQUETE 5 GB</option>
+                <option>PAQUETE 10 GB</option>
+                <option>PAQUETE 20 GB</option>
+                <option>PAQUETE ILIMITADO</option>
+            </select>
+        </div>
+
+        <button type="submit">PAGAR</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
