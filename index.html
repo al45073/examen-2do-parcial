@@ -3,65 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pago de Plan Telefónico</title>
+    <title>Recibo Telefónico</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
 <div class="contenedor">
 
-    <h1>PAGO DE PLAN TELEFÓNICO</h1>
+    <h1>RECIBO TELEFÓNICO</h1>
 
-    <form>
+    <form id="calculoMinutos">
 
-        <div class="fila">
-            <label for="minutos">MINUTOS:</label>
-            <input type="number" id="minutos" name="minutos" required>
+        <div class="seccion">
+            <h2>MINUTOS</h2>
+
+            <label for="minutos">
+                Minutos de celular (10.00 MXN c/u)
+            </label>
+
+            <input type="number" id="minutos" value="100">
         </div>
 
-        <div class="fila">
-            <label>TIPO PLAN:</label>
+        <div class="seccion">
+            <h2>TIPO DE PLAN</h2>
 
-            <div class="opciones">
-                <input type="radio" id="basico" name="plan">
-                <label for="basico">BÁSICO</label>
+            <input type="radio" id="telefono" name="plan">
+            <label for="telefono">Solo teléfono (100 MXN)</label><br>
 
-                <input type="radio" id="premium" name="plan">
-                <label for="premium">PREMIUM</label>
+            <input type="radio" id="internet" name="plan">
+            <label for="internet">Teléfono + Internet (200 MXN)</label><br>
 
-                <input type="radio" id="ilimitado" name="plan">
-                <label for="ilimitado">ILIMITADO</label>
-            </div>
+            <input type="radio" id="tv" name="plan">
+            <label for="tv">Teléfono + Internet + TV (300 MXN)</label>
         </div>
 
-        <div class="fila">
-            <label>OTROS SERVICIOS:</label>
+        <div class="seccion">
+            <h2>SERVICIOS ADICIONALES</h2>
 
-            <div class="opciones">
-                <input type="checkbox" id="sms">
-                <label for="sms">SMS</label>
+            <input type="checkbox" id="antivirus">
+            <label for="antivirus">Antivirus (50 MXN)</label><br>
 
-                <input type="checkbox" id="internet">
-                <label for="internet">INTERNET</label>
+            <input type="checkbox" id="nube">
+            <label for="nube">Servicio de Nube (150 MXN)</label><br>
 
-                <input type="checkbox" id="roaming">
-                <label for="roaming">ROAMING</label>
-            </div>
+            <input type="checkbox" id="web">
+            <label for="web">Web Services (250 MXN)</label>
         </div>
 
-        <div class="fila">
-            <label for="paquete">PAQUETES:</label>
+        <div class="seccion">
+            <h2>PAQUETES</h2>
 
-            <select id="paquete">
-                <option>SELECCIONE</option>
-                <option>PAQUETE 5 GB</option>
-                <option>PAQUETE 10 GB</option>
-                <option>PAQUETE 20 GB</option>
-                <option>PAQUETE ILIMITADO</option>
+            <select>
+                <option>Residencial</option>
+                <option>PYMES</option>
+                <option>Empresas</option>
             </select>
         </div>
 
-        <button type="submit">PAGAR</button>
+        <div class="seccion">
+            <h2>TOTAL A PAGAR</h2>
+
+            <input type="text" readonly placeholder="$0.00">
+        </div>
+
 
     </form>
 
